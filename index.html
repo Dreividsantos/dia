@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Meu Amor ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(to bottom, #ffe6f0, #ffffff);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 40px 20px 20px;
+      font-size: 2.2em;
+      color: #c2185b;
+    }
+    .intro {
+      padding: 20px;
+      font-size: 1.5em;
+      color: #880e4f;
+    }
+    .btn-start {
+      background: #c2185b;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 25px;
+      cursor: pointer;
+      font-family: 'Dancing Script', cursive;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+    .btn-start:hover {
+      background: #ad1457;
+    }
+    .swiper {
+      width: 100vw;
+      height: 100vh;
+      display: none;
+    }
+    .swiper-slide {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 12px;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      font-size: 1.2em;
+    }
+    footer {
+      margin: 20px;
+      font-style: italic;
+      color: #880e4f;
+      font-size: 1em;
+      display: none;
+    }
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center center;
+      background-size: contain;
+      animation: float 10s linear infinite;
+      opacity: 0.5;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+      50% { opacity: 0.8; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+  <header>Para o Amor da Minha Vida ❤️</header>
+  <div class="intro">
+    Preparei algo especial para você, com muito carinho. <br> Está pronta para ver?
+    <br><br>
+    <button class="btn-start" onclick="iniciarGaleria()">Ver Galeria</button>
+  </div>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/foto1.jpg" alt=""><div class="caption">Nosso primeiro encontro</div></div>
+      <div class="swiper-slide"><img src="images/foto2.jpg" alt=""><div class="caption">Seu sorriso ilumina tudo</div></div>
+      <div class="swiper-slide"><img src="images/foto3.jpg" alt=""><div class="caption">Momentos inesquecíveis</div></div>
+      <div class="swiper-slide"><img src="images/foto4.jpg" alt=""><div class="caption">Nosso lugar favorito</div></div>
+      <div class="swiper-slide"><img src="images/foto5.jpg" alt=""><div class="caption">Te amo cada dia mais</div></div>
+      <div class="swiper-slide"><img src="images/foto6.jpg" alt=""><div class="caption">Risadas e abraços</div></div>
+      <div class="swiper-slide"><img src="images/foto7.jpg" alt=""><div class="caption">Amor verdadeiro</div></div>
+      <div class="swiper-slide"><img src="images/foto8.jpg" alt=""><div class="caption">Você e eu, sempre</div></div>
+      <div class="swiper-slide"><img src="images/foto9.jpg" alt=""><div class="caption">Dias felizes</div></div>
+      <div class="swiper-slide"><img src="images/foto10.jpg" alt=""><div class="caption">Só nós dois</div></div>
+      <div class="swiper-slide"><img src="images/foto11.jpg" alt=""><div class="caption">Você é meu lar</div></div>
+      <div class="swiper-slide"><img src="images/foto12.jpg" alt=""><div class="caption">Te olhar é paz</div></div>
+      <div class="swiper-slide"><img src="images/foto13.jpg" alt=""><div class="caption">Beijos infinitos</div></div>
+      <div class="swiper-slide"><img src="images/foto14.jpg" alt=""><div class="caption">Nosso amor cresce</div></div>
+      <div class="swiper-slide"><img src="images/foto15.jpg" alt=""><div class="caption">Para sempre com você</div></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <footer id="rodape">Com todo meu amor, para você 💖</footer>
+
+  <audio id="musica" src="audio/romantic.mp3" preload="auto"></audio>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+    });
+
+    function iniciarGaleria() {
+      document.querySelector('.intro').style.display = 'none';
+      document.querySelector('.swiper').style.display = 'block';
+      document.querySelector('footer').style.display = 'block';
+      document.getElementById('musica').play();
+    }
+
+    const hearts = document.getElementById('hearts');
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      heart.style.opacity = Math.random();
+      hearts.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
